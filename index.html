@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitizingDesk | Files that run clean. Digitizing and Production Art for Decorators</title>
+  <meta name="description" content="DigitizingDesk is a production-art partner for US decoration shops. We turn customer artwork into files that run clean on the machine: embroidery digitizing, vector redraws, color separations, patch art and DTF gang sheets. Ready in 12 hours.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/brand/svg/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/brand/png/favicon-32.png">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body class="bg-cutting-mat">
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>🧵 <strong>Launch Offer:</strong> First embroidery design free (up to 8,000 stitches) for new shops</span>
+    <span>⏱️ Standard turnaround within 12 business hours</span>
+    <span>⚡ <a href="get-quote.html">Send art for 30-min quote</a></span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="DigitizingDesk Home">
+        <img src="assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk - Files that run clean" width="220" height="48">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="services/embroidery-digitizing.html" class="nav-link">Services <small style="font-size:0.7em;">▼</small></a>
+            <div class="nav-dropdown-menu">
+              <a href="services/embroidery-digitizing.html" class="dropdown-item">
+                Embroidery Digitizing
+                <small>Left chest, caps, jackets · from $15</small>
+              </a>
+              <a href="services/vector-artwork.html" class="dropdown-item">
+                Vector Artwork &amp; Cleanup
+                <small>Clean paths, redraws · from $8</small>
+              </a>
+              <a href="services/color-separations.html" class="dropdown-item">
+                Color Separations
+                <small>Spot, simulated process, CMYK · from $10</small>
+              </a>
+              <a href="services/patch-design.html" class="dropdown-item">
+                Custom Patch Design
+                <small>Embroidered, PVC, woven · from $20</small>
+              </a>
+              <a href="services/dtf-gang-sheets.html" class="dropdown-item">
+                DTF Gang Sheet Build
+                <small>22" nested layouts · from $10</small>
+              </a>
+            </div>
+          </li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-cta-group">
+        <a href="pricing.html" class="btn btn-secondary btn-sm">Rate Card</a>
+        <a href="get-quote.html" class="btn btn-primary btn-sm">Get a Quote</a>
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="mobile-drawer-overlay"></div>
+  <aside id="mobileDrawer" class="mobile-drawer">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+        <img src="assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk" style="height: 38px;">
+        <button id="closeDrawerBtn" style="background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--spool-ink);">&times;</button>
+      </div>
+      <div style="font-family: var(--font-mono); font-size:0.8rem; color:var(--thread-red); margin-bottom:1rem; text-transform:uppercase;">Navigation</div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:1rem;">
+        <li><a href="index.html" style="color:var(--spool-ink); font-weight:700;">Home</a></li>
+        <li><a href="services/embroidery-digitizing.html" style="color:var(--spool-ink);">Embroidery Digitizing</a></li>
+        <li><a href="services/vector-artwork.html" style="color:var(--spool-ink);">Vector Artwork</a></li>
+        <li><a href="services/color-separations.html" style="color:var(--spool-ink);">Color Separations</a></li>
+        <li><a href="services/patch-design.html" style="color:var(--spool-ink);">Custom Patch Design</a></li>
+        <li><a href="services/dtf-gang-sheets.html" style="color:var(--spool-ink);">DTF Gang Sheets</a></li>
+        <li><a href="pricing.html" style="color:var(--spool-ink); font-weight:600;">Pricing &amp; Rate Card</a></li>
+        <li><a href="work.html" style="color:var(--spool-ink); font-weight:600;">Proof &amp; Work</a></li>
+        <li><a href="about.html" style="color:var(--spool-ink);">About DigitizingDesk</a></li>
+        <li><a href="faq.html" style="color:var(--spool-ink);">Shop-Floor FAQ</a></li>
+      </ul>
+    </div>
+    <div style="padding-top:1.5rem; border-top:1px dashed var(--needle-steel-border);">
+      <a href="get-quote.html" class="btn btn-primary" style="width:100%; text-align:center;">Get a Quote (30 min)</a>
+      <p style="text-align:center; font-family:var(--font-mono); font-size:0.75rem; color:var(--needle-steel); margin-top:0.75rem;">A DMA company</p>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            <span>Shop-Floor Fluent Production Art Desk</span>
+          </div>
+          <h1 class="hero-title">Files that run clean.</h1>
+          <p class="hero-subhead">
+            Embroidery digitizing, vector art, color separations, patch design and DTF gang sheets for decoration shops. Ready in 12 hours.
+          </p>
+          <div class="hero-actions">
+            <a href="get-quote.html" class="btn btn-primary btn-lg">Get your first design free</a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg">See pricing</a>
+          </div>
+          <div class="hero-reassurance">
+            <span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              12-hour turnaround
+            </span>
+            <span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Free fixes if anything misbehaves
+            </span>
+            <span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Quote in 30 mins
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive Hero Showcase (Before/After Slider) -->
+        <div class="hero-media-card reg-mark-container">
+          <div class="hero-turnaround-badge">
+            <span>⚡ Ready in 9 hours</span>
+          </div>
+
+          <div class="before-after-container" id="heroSlider">
+            <!-- Background Image: Finished Sew-Out -->
+            <img class="ba-image ba-before" src="assets/images/embroidery/left-chest-crestmont.webp" alt="Finished Stitched Sew-Out on Polo">
+            
+            <!-- Foreground Clipped Image: Original Artwork -->
+            <div class="ba-after-wrapper">
+              <img class="ba-image" src="assets/images/vectors/vector-before-after-1.webp" alt="Cleaned Production Vector Artwork">
+            </div>
+
+            <!-- Draggable Divider Line -->
+            <div class="ba-slider-handle">
+              <div class="ba-handle-button">↔</div>
+            </div>
+
+            <!-- Labels -->
+            <span class="ba-label ba-label-after">ARTWORK PREP</span>
+            <span class="ba-label ba-label-before">SEW-OUT PROOF</span>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem;">
+            <div class="spec-tag red">.DST · 7,200 ST · 6 COLORS · LEFT CHEST</div>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--needle-steel);">Drag slider to compare</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-strip-inner">
+        <div class="trust-item">
+          <div class="trust-icon">⏱️</div>
+          <span>12-Hour Standard Turnaround</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🧵</div>
+          <span>Free Fixes if a File Misbehaves</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">📁</div>
+          <span>.DST, .PES, .AI, .EPS and more</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔄</div>
+          <span>2 Free Revision Rounds</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🏢</div>
+          <span style="color:var(--spool-ink); font-weight:700;">A DMA company</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (4 Steps) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">HOW THE DESK WORKS</span>
+        <h2>Four simple steps. Zero guesswork.</h2>
+        <p>No phone queues or automated ticket black holes. Hand your artwork to the desk like an in-house coworker.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card reg-mark-container">
+          <span class="process-step-num">STEP 01</span>
+          <h3 class="process-title">Send your art</h3>
+          <p class="process-desc">Any format: JPG, PNG, PDF, AI or even a camera phone snap from a walk-in client.</p>
+        </div>
+
+        <div class="process-card reg-mark-container">
+          <span class="process-step-num">STEP 02</span>
+          <h3 class="process-title">Quote in 30 minutes</h3>
+          <p class="process-desc">We review stitch feasibility, fabric pull comp, or mesh counts and return a firm quote.</p>
+        </div>
+
+        <div class="process-card reg-mark-container">
+          <span class="process-step-num">STEP 03</span>
+          <h3 class="process-title">Run-ready files</h3>
+          <p class="process-desc">Receive tested machine files (.DST/.PES), production sheet, thread sequences, and preview.</p>
+        </div>
+
+        <div class="process-card reg-mark-container">
+          <span class="process-step-num">STEP 04</span>
+          <h3 class="process-title">We stand behind it</h3>
+          <p class="process-desc">Anything off on the machine? Thread breaks or puckering? Send it back and we fix it free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" style="background-color: var(--paper-warm); border-top: 1px solid var(--needle-steel-border); border-bottom: 1px solid var(--needle-steel-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">SERVICE CATALOG</span>
+        <h2>One desk for all your art prep.</h2>
+        <p>Everything we deliver is design and file work calibrated for machine production. No physical products shipped.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Embroidery Digitizing -->
+        <div class="service-card reg-mark-container">
+          <div class="service-card-media">
+            <img src="assets/images/embroidery/cap-crestmont.webp" alt="Cap Embroidery Digitizing">
+            <span class="spec-tag" style="position:absolute; bottom:12px; left:12px;">.DST · .PES · PDF SHEET</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta-strip">
+              <span class="service-price">Left chest from $15 · Caps $18</span>
+              <span class="service-turnaround">⏱️ 12 hours</span>
+            </div>
+            <h3 class="service-title">Embroidery Digitizing</h3>
+            <p class="service-desc">
+              Run-ready stitch files for left chest, caps, full back, and 3D puff. Dialed in for your specific garment fabric.
+            </p>
+            <ul class="service-specs-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Calibrated pull comp &amp; underlay by fabric
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                PDF thread sequence &amp; stitch count sheet
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Optional real sew-out proof photo (+$6)
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="services/embroidery-digitizing.html" class="btn btn-secondary btn-sm" style="flex:1;">View Details</a>
+              <a href="get-quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Vector Artwork -->
+        <div class="service-card reg-mark-container">
+          <div class="service-card-media">
+            <img src="assets/images/vectors/vector-before-after-3.webp" alt="Vector Artwork Conversion">
+            <span class="spec-tag" style="position:absolute; bottom:12px; left:12px;">.AI · .EPS · .SVG · .PDF</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta-strip">
+              <span class="service-price">Simple from $8 · Standard $15</span>
+              <span class="service-turnaround">⏱️ 4 to 12 hours</span>
+            </div>
+            <h3 class="service-title">Vector Artwork Conversion</h3>
+            <p class="service-desc">
+              Redraw raster logos and messy customer sketches into razor-sharp, editable vectors ready for print, vinyl or embroidery.
+            </p>
+            <ul class="service-specs-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Outlined fonts &amp; named spot colors
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Expanded strokes &amp; welded paths
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Ready for vinyl cutting, screen print or engraving
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="services/vector-artwork.html" class="btn btn-secondary btn-sm" style="flex:1;">View Details</a>
+              <a href="get-quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Color Separations -->
+        <div class="service-card reg-mark-container">
+          <div class="service-card-media">
+            <img src="assets/images/seps/color-separation-layers.jpg" alt="Screen Print Color Separations">
+            <span class="spec-tag" style="position:absolute; bottom:12px; left:12px;">LAYERED .AI / .PSD · 1-BIT TIFF</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta-strip">
+              <span class="service-price">Spot $10/color · CMYK $35</span>
+              <span class="service-turnaround">⏱️ 12 hours</span>
+            </div>
+            <h3 class="service-title">Screen Print Color Separations</h3>
+            <p class="service-desc">
+              Press-ready separations for manual and automatic presses: spot colors, simulated process, index, and CMYK.
+            </p>
+            <ul class="service-specs-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Choked underbase &amp; registration marks
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Pantone matching &amp; recommended mesh counts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Simulated process halftone prep (45-55 LPI)
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="services/color-separations.html" class="btn btn-secondary btn-sm" style="flex:1;">View Details</a>
+              <a href="get-quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Custom Patch Design -->
+        <div class="service-card reg-mark-container">
+          <div class="service-card-media">
+            <img src="assets/images/patches/embroidered-patch-1.webp" alt="Custom Patch Design and Production Specs">
+            <span class="spec-tag" style="position:absolute; bottom:12px; left:12px;">SPEC SHEET · MOCKUP · .DST</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta-strip">
+              <span class="service-price">Patch art from $20 · Digitize $25</span>
+              <span class="service-turnaround">⏱️ 24 hours</span>
+            </div>
+            <h3 class="service-title">Custom Patch Design</h3>
+            <p class="service-desc">
+              Production files, realistic customer mockups and vendor-ready spec sheets for embroidered, PVC, leather, woven, and chenille.
+            </p>
+            <ul class="service-specs-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Vendor spec sheet with exact Pantone callouts
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Border styles (merrowed / laser cut) &amp; backings
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Layered mold artwork for PVC / rubber
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="services/patch-design.html" class="btn btn-secondary btn-sm" style="flex:1;">View Details</a>
+              <a href="get-quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: DTF Gang Sheets -->
+        <div class="service-card reg-mark-container">
+          <div class="service-card-media">
+            <img src="assets/images/seps/cmyk-sim-process.webp" alt="DTF Gang Sheet Build">
+            <span class="spec-tag" style="position:absolute; bottom:12px; left:12px;">22" WIDE · 300 DPI TRANSPARENT</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta-strip">
+              <span class="service-price">Layouts from $10 per sheet</span>
+              <span class="service-turnaround">⏱️ 6 to 12 hours</span>
+            </div>
+            <h3 class="service-title">DTF Gang Sheet Build</h3>
+            <p class="service-desc">
+              Nested gang sheets optimized to fit maximum transfers per linear foot without wasted film. Clean transparent edges and fades.
+            </p>
+            <ul class="service-specs-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tight nesting for 22" film rolls (60", 120", 240")
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Halftone underbase prep for smoky gradients
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Ready-to-print 300 DPI transparent PNG
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="services/dtf-gang-sheets.html" class="btn btn-secondary btn-sm" style="flex:1;">View Details</a>
+              <a href="get-quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaser Card: Prepaid Desk Balance -->
+        <div class="service-card reg-mark-container" style="background:var(--spool-ink); color:var(--paper);">
+          <div class="service-card-body" style="justify-content:center; text-align:center;">
+            <div class="spec-tag gold" style="margin: 0 auto 1.25rem auto;">DESK BALANCE</div>
+            <h3 style="color:#fff; font-size:1.6rem; margin-bottom:1rem;">Prepay &amp; Get Up to 20% Extra Credit</h3>
+            <p style="color:#D4D8E2; font-size:0.95rem; margin-bottom:1.5rem;">
+              Skip per-file checkout. Load your shop account, speed up production, and earn $25 to $200 in free bonus artwork credit.
+            </p>
+            <div style="font-family:var(--font-mono); font-size:1.1rem; color:var(--hoop-gold); margin-bottom:1.5rem;">
+              Load $500 → Run $575
+            </div>
+            <a href="pricing.html#prepaid" class="btn btn-primary">See Prepaid Tiers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Quick Quote Estimator -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">TRANSPARENT RATES</span>
+        <h2>Instant Shop-Floor Estimator</h2>
+        <p>No sales reps calling you. Select your service, check turnaround, and see transparent rates before you send art.</p>
+      </div>
+
+      <div class="estimator-card reg-mark-container" style="max-width: 860px; margin: 0 auto;">
+        <div class="estimator-header">
+          <div>
+            <span class="estimator-step-label">1. Choose Service</span>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem;">
+              <button class="estimator-pill service-pill active" data-service="embroidery">Embroidery</button>
+              <button class="estimator-pill service-pill" data-service="vector">Vector Art</button>
+              <button class="estimator-pill service-pill" data-service="separations">Color Seps</button>
+              <button class="estimator-pill service-pill" data-service="patch">Patch Art</button>
+              <button class="estimator-pill service-pill" data-service="dtf">DTF Gang</button>
+            </div>
+          </div>
+          <div>
+            <label style="display:flex; align-items:center; gap:0.5rem; font-family:var(--font-mono); font-size:0.88rem; cursor:pointer; background:var(--paper-warm); padding:0.5rem 0.85rem; border-radius:var(--radius-sm);">
+              <input type="checkbox" id="calcRush">
+              <span>⚡ Rush (2-4 hrs, +50%)</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <span class="estimator-step-label">2. Select Placement or Complexity</span>
+          
+          <!-- Embroidery Tiers -->
+          <div class="estimator-options tier-group" data-for-service="embroidery">
+            <div class="estimator-pill type-pill active" data-tier="chest">
+              Left Chest
+              <small>&lt; 8,000 st</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="cap">
+              Cap Front
+              <small>&lt; 8,000 st</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="medium">
+              Medium Design
+              <small>8k - 15k st</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="jacket">
+              Jacket Back
+              <small>15k - 30k st</small>
+            </div>
+          </div>
+
+          <!-- Vector Tiers -->
+          <div class="estimator-options tier-group" data-for-service="vector" style="display:none;">
+            <div class="estimator-pill type-pill" data-tier="simple">
+              Simple Logo
+              <small>1-3 flat colors</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="standard">
+              Standard Logo
+              <small>Multi-color detail</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="complex">
+              Complex Art
+              <small>Illustration, 8+ col</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="cleanup">
+              Vector Cleanup
+              <small>Fix existing paths</small>
+            </div>
+          </div>
+
+          <!-- Seps Tiers -->
+          <div class="estimator-options tier-group" data-for-service="separations" style="display:none;">
+            <div class="estimator-pill type-pill" data-tier="spot2">
+              Spot (2 colors)
+              <small>$10/color min $20</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="spot4">
+              Spot (4 colors)
+              <small>$40 flat</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="cmyk">
+              CMYK 4-Color
+              <small>$35 flat</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="sim">
+              Simulated Process
+              <small>$45 flat</small>
+            </div>
+          </div>
+
+          <!-- Patch Tiers -->
+          <div class="estimator-options tier-group" data-for-service="patch" style="display:none;">
+            <div class="estimator-pill type-pill" data-tier="art3">
+              Patch Art (1-3 col)
+              <small>Mockup + specs</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="art4">
+              Patch Art (Detailed)
+              <small>4+ colors</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="digitized">
+              Embroidered Patch
+              <small>With merrowed border</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="pvc">
+              PVC / Rubber Mold
+              <small>Layered color callouts</small>
+            </div>
+          </div>
+
+          <!-- DTF Tiers -->
+          <div class="estimator-options tier-group" data-for-service="dtf" style="display:none;">
+            <div class="estimator-pill type-pill" data-tier="sheet60">
+              22" x 60" Sheet
+              <small>Nested film layout</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="sheet120">
+              22" x 120" Sheet
+              <small>10 ft roll layout</small>
+            </div>
+            <div class="estimator-pill type-pill" data-tier="sheet240">
+              22" x 240" Sheet
+              <small>20 ft roll layout</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="estimator-total-box">
+          <div>
+            <span style="font-size:0.85rem; color:var(--needle-steel); font-family:var(--font-mono); display:block;">ESTIMATED BASE COST</span>
+            <div class="estimator-price" id="calcPrice">$15</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="estimator-time">
+              <span>⏱️ Turnaround:</span>
+              <strong id="calcTurnaround">12 hours</strong>
+            </div>
+            <span style="font-size:0.8rem; color:var(--sew-green); font-weight:600; display:block; margin-top:0.25rem;">
+              First design free for new shops!
+            </span>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem; text-align:center;">
+          <a href="get-quote.html" class="btn btn-primary btn-lg">Send this logo to the desk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Showcase / Proof Gallery -->
+  <section class="section" style="background:var(--paper-warm); border-top:1px solid var(--needle-steel-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">SHOP-FLOOR PROOF</span>
+        <h2>Files that ran clean on real machines.</h2>
+        <p>No 3D renders. Real stitching, real vector paths, and real separations tested on decorator presses.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Item 1: Cap embroidery -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/embroidery/cap-crestmont.webp" alt="Cap front embroidery proof">
+            <span class="spec-tag" style="position:absolute; bottom:10px; left:10px;">.DST · 6,800 ST · CAP FRONT</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Crestmont Structured Cap</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Stitched center-out for curved buckram cap front</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Jacket Back -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/embroidery/sewout-jacket-back.jpg" alt="Jacket Back full sew-out">
+            <span class="spec-tag" style="position:absolute; bottom:10px; left:10px;">.DST · 24,500 ST · JACKET BACK</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Varsity Eagle Back Emblem</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Multi-angle underlay prevents fabric distortion on fleece</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Vector Redraw -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/vectors/vector-before-after-2.webp" alt="Vector logo redraw comparison">
+            <span class="spec-tag red" style="position:absolute; bottom:10px; left:10px;">.AI / .EPS · 4 SPOT COLORS</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Low-Res JPG to Clean Vector</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Redrawn in 6 hours for screen print separation</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Custom Patch -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/patches/chenille-patch.webp" alt="Chenille varsity patch art">
+            <span class="spec-tag gold" style="position:absolute; bottom:10px; left:10px;">CHENILLE + FELT · SPEC SHEET</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Letterman Varsity Patch Art</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Includes chain-stitch perimeter and felt underlay callouts</p>
+          </div>
+        </div>
+
+        <!-- Item 5: Color Separation -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/seps/color-separation-layers.jpg" alt="Screen print color separation channels">
+            <span class="spec-tag teal" style="position:absolute; bottom:10px; left:10px;">SIMULATED PROCESS · 6 SCREENS</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Dark Garment Halftone Seps</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Choked white underbase, 50 LPI, 230 mesh spec</p>
+          </div>
+        </div>
+
+        <!-- Item 6: Left Chest Sew-Out -->
+        <div class="portfolio-card reg-mark-container">
+          <div class="portfolio-card-media">
+            <img src="assets/images/embroidery/left-chest-crestmont.webp" alt="Left chest polo sew-out proof">
+            <span class="spec-tag" style="position:absolute; bottom:10px; left:10px;">.DST · 7,200 ST · PIQUE POLO</span>
+          </div>
+          <div class="portfolio-card-info">
+            <h4 class="portfolio-card-title">Corporate Left Chest Sew-Out</h4>
+            <p style="font-size:0.85rem; color:var(--needle-steel); margin:0;">Heavy tatami fill with mesh underlay for pique polo stability</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="work.html" class="btn btn-secondary">Explore full gallery &amp; before-afters →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decorator FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">COMMON QUESTIONS</span>
+        <h2>Answers before you send your art.</h2>
+        <p>Direct shop-floor answers. No corporate doublespeak.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Which file formats do you deliver?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>For embroidery: .DST and .PES are delivered as standard with every job. We also provide .EMB, .EXP, .JEF, .XXX, and .VP3 upon request at no extra charge. Every delivery includes an easy-to-read PDF production sheet (size, stitch count, thread color sequence) and a high-res PNG stitch preview.</p>
+            <p>For vectors: .AI, .EPS, .SVG, and print-ready PDF with outlined fonts and named spot colors.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Will it work on my machine?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Tajima .DST is the universal industry standard and runs on Tajima, Barudan, Melco, Ricoma, Brother, SWF, Happy, ZSK, and all commercial multi-head machines. When you send artwork, tell us your garment or fabric type (e.g. pique polo, structured 6-panel cap, hoodie, lightweight poly performance), and our digitizers calibrate the pull compensation, stitch density, and underlay specifically for that material so the file runs clean without puckering or thread breaks.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you digitize from a low-quality JPG or screenshot?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Over 60% of what decorators receive from customers is a blurry phone photo, a screenshot, or a web JPG. Our team redraws the artwork cleanly first to establish crisp vector anchors, ensuring every letter and satin border stitches straight and sharp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How fast is turnaround? What if I have a rush job?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard turnaround is within 12 business hours (most jobs delivered in 8 to 10 hours). If you have a customer waiting at the counter or an urgent press run, select our Rush option (+50%) for guaranteed delivery within 2 to 4 hours.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens if a file does not run clean on my machine?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>We fix it free.</strong> If you encounter thread breaks, birdnesting, puckering, or registration shifts due to our digitizing error, tell us what happened (or send a quick phone photo of the sew-out). We adjust pull compensation, density, or underlay and return the fixed file within 2 to 4 hours at zero charge. If we cannot make it run clean after two fix attempts, we refund that file in full.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Who owns the files and artwork?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You and your customer do. Your artwork stays strictly confidential. We never reuse, resell, or share your designs. White-label files are delivered completely unbranded so you can pass them directly to your clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Call to Action Banner -->
+  <section class="section section-dark bg-cutting-mat-dark" style="border-top:3px solid var(--thread-red); text-align:center;">
+    <div class="container">
+      <div style="max-width:760px; margin:0 auto;">
+        <span class="section-eyebrow" style="color:var(--hoop-gold);">READY TO RUN</span>
+        <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:1.25rem;">
+          Send us your next logo.<br>If it does not run clean, we fix it free.
+        </h2>
+        <p style="font-size:1.15rem; color:#D4D8E2; margin-bottom:2rem;">
+          Get your first left chest or cap design free (up to 8,000 stitches). Experience what files engineered for the machine look like.
+        </p>
+        <div style="display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
+          <a href="get-quote.html" class="btn btn-primary btn-lg">Get Your First Design Free</a>
+          <a href="pricing.html" class="btn btn-secondary btn-lg" style="color:#FFFFFF; border-color:#FFFFFF;">View Rate Card</a>
+        </div>
+        <div style="margin-top:2rem; font-family:var(--font-mono); font-size:0.82rem; color:var(--needle-steel);">
+          Quotes in 30 minutes during business hours · Pay at delivery for new shops
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="assets/brand/svg/digitizingdesk-horizontal-reversed.svg" alt="DigitizingDesk Logo" width="220" height="48">
+          </a>
+          <p>
+            DigitizingDesk is a production-art partner for US decoration shops. We turn customer artwork into files that run clean on the machine.
+          </p>
+          <div class="footer-dma-badge">
+            A DMA company (Digital Minds Agency)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services/embroidery-digitizing.html">Embroidery Digitizing</a></li>
+            <li><a href="services/vector-artwork.html">Vector Artwork Conversion</a></li>
+            <li><a href="services/color-separations.html">Color Separations</a></li>
+            <li><a href="services/patch-design.html">Custom Patch Design</a></li>
+            <li><a href="services/dtf-gang-sheets.html">DTF Gang Sheet Build</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company &amp; Work</h4>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing &amp; Rate Card</a></li>
+            <li><a href="work.html">Sew-Out Proofs &amp; Work</a></li>
+            <li><a href="about.html">About the Desk</a></li>
+            <li><a href="faq.html">Decorator FAQ</a></li>
+            <li><a href="get-quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Shop Guarantee</h4>
+          <p style="font-size:0.88rem; color:#D4D8E2; margin-bottom:0.75rem;">
+            1. Files that run clean on the first try.<br>
+            2. A real person answers, fast.<br>
+            3. Free fixes if a file misbehaves.
+          </p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--hoop-gold);">
+            @digitizingdesk
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 DigitizingDesk. All rights reserved. A DMA company.
+        </div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="terms.html" style="color:var(--needle-steel);">Terms &amp; Machine Guarantee</a>
+          <a href="privacy.html" style="color:var(--needle-steel);">Privacy &amp; Artwork Ownership</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/before-after.js"></script>
+  <script src="assets/js/quote-calculator.js"></script>
+</body>
+</html>

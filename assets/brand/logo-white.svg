@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none" width="320" height="64">
+  <!-- DigitizingDesk White/Inverted Logo for Dark Sections (Spool Ink) -->
+  <g id="brand-wordmark-white">
+    <!-- Icon Mark: Stitched D -->
+    <g transform="translate(6, 8)">
+      <path d="M4 4 H18 C28 4 34 11 34 23 C34 35 28 42 18 42 H4 V4 Z" fill="none" stroke="#F7F3EA" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M18 10 C24 10 28 15 28 23 C28 31 24 36 18 36" fill="none" stroke="#D63C30" stroke-width="3" stroke-dasharray="5 4" stroke-linecap="round"/>
+      <rect x="29" y="21" width="5" height="5" fill="#17203A" stroke="#D63C30" stroke-width="2"/>
+    </g>
+
+    <!-- Main Text: DigitizingDesk -->
+    <text x="56" y="38" font-family="'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="27" fill="#F7F3EA" letter-spacing="-0.5">Digitizing<tspan fill="#D63C30">Desk</tspan></text>
+    
+    <!-- Signature Running Stitch Underline -->
+    <path d="M57 48 H276" stroke="#D63C30" stroke-width="2.5" stroke-dasharray="7 5" stroke-linecap="round"/>
+    
+    <!-- Vector Anchor Node at the end of the stitch line -->
+    <rect x="277" y="45.5" width="5" height="5" fill="#17203A" stroke="#D63C30" stroke-width="1.8"/>
+    <!-- Anchor Node Handle extension dots -->
+    <circle cx="286" cy="48" r="1.5" fill="#1F7F82"/>
+    <line x1="282" y1="48" x2="284.5" y2="48" stroke="#1F7F82" stroke-width="1"/>
+  </g>
+</svg>
