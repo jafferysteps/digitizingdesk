@@ -1,4 +1,6 @@
-/* DigitizingDesk Before/After Comparison Slider */
+/* DigitizingDesk Before/After Comparison Slider
+   Engineered for seamless responsive touch, pointer, and click interaction.
+*/
 
 function initBeforeAfterSliders() {
   const containers = document.querySelectorAll('.before-after-container');
@@ -8,11 +10,19 @@ function initBeforeAfterSliders() {
     const handle = container.querySelector('.ba-slider-handle');
     if (!afterWrapper || !handle) return;
 
+    // Set exact container width variable so the inside image clips without distortion
+    function syncWidth() {
+      const containerWidth = container.clientWidth;
+      container.style.setProperty('--ba-width', `${containerWidth}px`);
+    }
+
+    syncWidth();
+
     let isDragging = false;
 
-    function updateSlider(xPos) {
+    function updateSlider(clientX) {
       const rect = container.getBoundingClientRect();
-      let offsetX = xPos - rect.left;
+      let offsetX = clientX - rect.left;
       if (offsetX < 0) offsetX = 0;
       if (offsetX > rect.width) offsetX = rect.width;
 
@@ -21,40 +31,46 @@ function initBeforeAfterSliders() {
       handle.style.left = `${percentage}%`;
     }
 
-    // Mouse Events
-    handle.addEventListener('mousedown', (e) => {
+    // Modern Pointer Events (Works identically for Mouse, Touch & Pen with no lag)
+    handle.addEventListener('pointerdown', (e) => {
       isDragging = true;
+      handle.setPointerCapture(e.pointerId);
       e.preventDefault();
     });
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    window.addEventListener('mousemove', (e) => {
+    handle.addEventListener('pointermove', (e) => {
       if (!isDragging) return;
       updateSlider(e.clientX);
     });
 
-    // Touch Events for Mobile
-    handle.addEventListener('touchstart', (e) => {
-      isDragging = true;
-    }, { passive: true });
+    handle.addEventListener('pointerup', (e) => {
+      isDragging = false;
+      try {
+        handle.releasePointerCapture(e.pointerId);
+      } catch (err) {}
+    });
 
-    window.addEventListener('touchend', () => {
+    handle.addEventListener('pointercancel', () => {
       isDragging = false;
     });
 
-    window.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      if (e.touches.length > 0) {
-        updateSlider(e.touches[0].clientX);
+    // Tap/Click anywhere on the container to move divider immediately
+    container.addEventListener('pointerdown', (e) => {
+      if (e.target !== handle && !handle.contains(e.target)) {
+        updateSlider(e.clientX);
       }
-    }, { passive: true });
+    });
 
-    // Click anywhere on container to move handle
-    container.addEventListener('click', (e) => {
-      updateSlider(e.clientX);
+    // Resize observer or window resize listener to keep image widths synchronized
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(() => syncWidth());
+      ro.observe(container);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    containers.forEach(c => {
+      c.style.setProperty('--ba-width', `${c.clientWidth}px`);
     });
   });
 }

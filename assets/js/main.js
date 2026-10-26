@@ -23,6 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
+  // Close mobile drawer when any link inside it is clicked
+  if (mobileDrawer) {
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+  }
+
+  // Close drawer on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
+
   // 2. FAQ Accordions
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
