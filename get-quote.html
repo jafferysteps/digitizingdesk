@@ -118,7 +118,10 @@
         <!-- Main Form Card -->
         <div class="quote-form-card reg-mark-container">
           
-          <form id="digitizingQuoteForm">
+          <form id="digitizingQuoteForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="access_key" value="4184bfed-f0c7-4000-9ce1-2a33178f3489">
+              <input type="hidden" name="from_name" value="DigitizingDesk Intake">
+              <input type="hidden" name="subject" value="New Artwork Quote Request - DigitizingDesk">
             <!-- 1. Contact Information -->
             <div style="margin-bottom:1.75rem;">
               <h3 style="font-size:1.25rem; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--needle-steel-border);">

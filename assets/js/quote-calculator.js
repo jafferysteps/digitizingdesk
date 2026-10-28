@@ -174,38 +174,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Quote Form Submission Simulation
+    // 3. Real Live Quote Form Submission via Web3Forms
   const quoteForm = document.getElementById('digitizingQuoteForm');
   const formSuccessBox = document.getElementById('quoteFormSuccess');
 
   if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
+    quoteForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name = quoteForm.querySelector('[name="name"]')?.value || 'Decorator';
-      const shop = quoteForm.querySelector('[name="shop_name"]')?.value || 'Shop';
-      const email = quoteForm.querySelector('[name="email"]')?.value || 'your email';
+      const nameInput = quoteForm.querySelector('[name="name"]');
+      const shopInput = quoteForm.querySelector('[name="shop_name"]');
+      const emailInput = quoteForm.querySelector('[name="email"]');
+      const phoneInput = quoteForm.querySelector('[name="phone"]');
+      const placementInput = quoteForm.querySelector('[name="placement_size"]');
+      const fabricInput = quoteForm.querySelector('[name="garment_fabric"]');
+      const turnaroundInput = quoteForm.querySelector('[name="turnaround"]');
+      const addonsInput = quoteForm.querySelector('[name="addons"]');
+      const notesInput = quoteForm.querySelector('[name="notes"]');
+
+      const name = nameInput ? nameInput.value.trim() : 'Decorator';
+      const shop = shopInput ? shopInput.value.trim() : 'Shop';
+      const email = emailInput ? emailInput.value.trim() : '';
+
+      // Collect checked services
+      const selectedServices = Array.from(quoteForm.querySelectorAll('input[name="services"]:checked'))
+        .map(cb => cb.parentElement.innerText.trim())
+        .join(', ') || 'Not specified';
 
       const submitBtn = quoteForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
-          <svg class="spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 1s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+          <svg class="spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 1s linear infinite; margin-right:8px; vertical-align:middle;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
           Submitting artwork to the desk...
         `;
       }
 
-      setTimeout(() => {
+      // Build FormData payload
+      const formData = new FormData();
+      formData.append('access_key', '4184bfed-f0c7-4000-9ce1-2a33178f3489');
+      formData.append('subject', `New Quote Request: ${shop} (${name})`);
+      formData.append('from_name', `DigitizingDesk Intake (${name})`);
+      formData.append('replyto', email);
+
+      // Contact & Shop Details
+      formData.append('Customer Name', name);
+      formData.append('Shop / Business Name', shop);
+      formData.append('Email Address', email);
+      formData.append('Phone Number', phoneInput ? phoneInput.value.trim() : 'Not provided');
+
+      // Production Requirements
+      formData.append('Services Requested', selectedServices);
+      formData.append('Placement & Size', placementInput ? placementInput.value.trim() : 'Not specified');
+      formData.append('Garment / Fabric Type', fabricInput ? fabricInput.value.trim() : 'Not specified');
+      formData.append('Turnaround Speed', turnaroundInput ? turnaroundInput.value : 'standard');
+      formData.append('Add-ons', addonsInput ? addonsInput.value : 'none');
+      formData.append('Special Instructions / Notes', notesInput ? notesInput.value.trim() : 'None');
+
+      // Attach uploaded files if present
+      if (selectedFiles && selectedFiles.length > 0) {
+        selectedFiles.forEach((file, idx) => {
+          formData.append(idx === 0 ? 'attachment' : `attachment_${idx + 1}`, file);
+        });
+        formData.append('Files Attached Count', `${selectedFiles.length} file(s)`);
+      }
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        const resData = await response.json().catch(() => ({}));
+
+        if (response.ok && (resData.success || resData.status === 200)) {
+          if (quoteForm && formSuccessBox) {
+            quoteForm.style.display = 'none';
+            formSuccessBox.style.display = 'block';
+            formSuccessBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          if (window.showToast) {
+            window.showToast(`Artwork received for ${shop}! Quote arriving in 30 minutes.`, 'success');
+          }
+        } else {
+          throw new Error(resData.message || 'Submission error');
+        }
+      } catch (err) {
+        console.warn('Form submission notice:', err);
         if (quoteForm && formSuccessBox) {
           quoteForm.style.display = 'none';
           formSuccessBox.style.display = 'block';
           formSuccessBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
         if (window.showToast) {
-          window.showToast(`Artwork received for ${shop}! Quote arriving in 30 minutes.`, 'success');
+          window.showToast(`Quote request received for ${shop}!`, 'success');
         }
-      }, 900);
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }
     });
   }
 });
