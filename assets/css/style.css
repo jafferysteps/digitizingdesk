@@ -717,6 +717,112 @@ a:hover {
 }
 
 /* -------------------------------------------------------------
+   FILE FORMATS RUNNING MARQUEE TICKER
+   ------------------------------------------------------------- */
+.marquee-strip {
+  background: #FFFFFF;
+  border-top: 1px solid var(--needle-steel-border);
+  border-bottom: 1px solid var(--needle-steel-border);
+  overflow: hidden;
+  user-select: none;
+  padding: 0.85rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-strip::before,
+.marquee-strip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-strip::before {
+  left: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, transparent 100%);
+}
+
+.marquee-strip::after {
+  right: 0;
+  background: linear-gradient(270deg, #FFFFFF 0%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--spool-ink);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.marquee-badge {
+  background: var(--paper-warm);
+  color: var(--spool-ink);
+  border: 1px solid var(--needle-steel-border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.marquee-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--thread-red);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee-strip {
+    padding: 0.75rem 0;
+  }
+  .marquee-track {
+    animation-duration: 26s;
+  }
+  .marquee-strip::before,
+  .marquee-strip::after {
+    width: 35px;
+  }
+}
+
+/* -------------------------------------------------------------
    HOW IT WORKS (4 STEPS)
    ------------------------------------------------------------- */
 .process-grid {
