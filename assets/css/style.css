@@ -998,7 +998,7 @@ a:hover {
 
 .pricing-table {
   width: 100%;
-  min-width: 520px;
+  table-layout: auto;
   border-collapse: collapse;
   text-align: left;
 }
@@ -1026,6 +1026,37 @@ a:hover {
 
 .pricing-table tr:hover td {
   background: rgba(247, 243, 234, 0.4);
+}
+
+
+/* Compact 2-Column Tables (No horizontal scroll) */
+.pricing-table-compact {
+  width: 100%;
+  min-width: 0 !important;
+  table-layout: auto;
+}
+
+.pricing-table-compact td {
+  padding: 0.85rem 1rem !important;
+}
+
+.pricing-table-compact .pricing-item-name {
+  font-size: 0.92rem;
+  display: block;
+}
+
+.pricing-table-compact .pricing-item-specs {
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.pricing-table-compact .pricing-item-price {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.pricing-table-wrapper.no-scroll {
+  overflow-x: visible !important;
 }
 
 .pricing-item-name {
