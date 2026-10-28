@@ -1981,3 +1981,68 @@ textarea.form-control {
     grid-column: span 1 !important;
   }
 }
+
+
+/* Strict Grid Item Containment to prevent min-content horizontal blowout */
+.hero-grid,
+.services-grid,
+.process-grid,
+.portfolio-grid,
+.feature-grid-2,
+.feature-grid-3,
+.feature-grid-4,
+.quote-layout,
+.footer-grid {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.hero-grid > *,
+.services-grid > *,
+.process-grid > *,
+.portfolio-grid > *,
+.feature-grid-2 > *,
+.feature-grid-3 > *,
+.feature-grid-4 > *,
+.quote-layout > *,
+.footer-grid > * {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.hero-copy {
+  width: 100% !important;
+  max-width: 620px;
+  min-width: 0 !important;
+}
+
+.hero-media-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.before-after-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.spec-tag {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  max-width: 100% !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+@media (max-width: 768px) {
+  .hero-actions .btn {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
