@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | Send Your Artwork to the Desk | DigitizingDesk</title>
+  <meta name="description" content="Send your customer logo or sketch. Get a firm production quote in 30 minutes during business hours. First embroidery design is free for new shops.">
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/svg/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body class="bg-cutting-mat">
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span><strong>Launch Offer:</strong> First embroidery design free (up to 8,000 stitches) for new shops</span>
+    <span>Standard turnaround within 12 business hours</span>
+    <span>Quote in 30 minutes</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <img src="/assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk" width="220" height="48">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="/services/embroidery-digitizing" class="nav-link">Services <small style="font-size:0.7em;">▼</small></a>
+            <div class="nav-dropdown-menu">
+              <a href="/services/embroidery-digitizing" class="dropdown-item">Embroidery Digitizing <small>From $8</small></a>
+              <a href="/services/vector-artwork" class="dropdown-item">Vector Artwork <small>From $8</small></a>
+              <a href="/services/color-separations" class="dropdown-item">Color Separations <small>From $8</small></a>
+              <a href="/services/patch-design" class="dropdown-item">Custom Patch Design <small>From $8</small></a>
+              <a href="/services/dtf-gang-sheets" class="dropdown-item">DTF Gang Sheets <small>From $8</small></a>
+            </div>
+          </li>
+          <li><a href="/pricing" class="nav-link">Pricing</a></li>
+          <li><a href="/work" class="nav-link">Work</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta-group">
+        <a href="/pricing" class="btn btn-secondary btn-sm">Rate Card</a>
+        <a href="/get-quote" class="btn btn-primary btn-sm active">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quote Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <span class="section-eyebrow">PRODUCTION INTAKE</span>
+        <h1>Send your art. Get run-ready files back fast.</h1>
+        <p class="lead">
+          Quotes returned in 30 minutes during US business hours. If it's your first order, your embroidery design is free (left chest or cap front, up to 8k stitches).
+        </p>
+      </div>
+
+      <div class="quote-layout">
+        <!-- Main Form Card -->
+        <div class="quote-form-card reg-mark-container">
+          
+          <form id="digitizingQuoteForm">
+            <!-- 1. Contact Information -->
+            <div style="margin-bottom:1.75rem;">
+              <h3 style="font-size:1.25rem; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--needle-steel-border);">
+                1. Your Shop Details
+              </h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" name="name" class="form-control" placeholder="e.g. Mike Henderson" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Shop or Business Name <span class="required">*</span></label>
+                  <input type="text" name="shop_name" class="form-control" placeholder="e.g. Apex Stitch &amp; Print" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" name="email" class="form-control" placeholder="mike@apexstitch.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number <small style="font-weight:normal; color:var(--needle-steel);">(Optional)</small></label>
+                  <input type="tel" name="phone" class="form-control" placeholder="(555) 000-0000">
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Services Needed -->
+            <div style="margin-bottom:1.75rem;">
+              <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">2. Service(s) Needed</h3>
+              <p style="font-size:0.85rem; color:var(--needle-steel); margin-bottom:1rem;">Select all that apply for this artwork:</p>
+              
+              <div class="service-checkbox-grid">
+                <label class="service-check-label">
+                  <input type="checkbox" name="services" value="embroidery" checked>
+                  <span class="service-check-title">Embroidery Digitizing</span>
+                </label>
+                <label class="service-check-label">
+                  <input type="checkbox" name="services" value="vector">
+                  <span class="service-check-title">Vector Artwork Redraw</span>
+                </label>
+                <label class="service-check-label">
+                  <input type="checkbox" name="services" value="separations">
+                  <span class="service-check-title">Screen Print Color Seps</span>
+                </label>
+                <label class="service-check-label">
+                  <input type="checkbox" name="services" value="patch">
+                  <span class="service-check-title">Custom Patch Design</span>
+                </label>
+                <label class="service-check-label" style="grid-column: span 2;">
+                  <input type="checkbox" name="services" value="dtf">
+                  <span class="service-check-title">DTF Gang Sheet Build (22" roll)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3. Drag & Drop File Upload -->
+            <div style="margin-bottom:1.75rem;">
+              <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">3. Upload Artwork</h3>
+              <p style="font-size:0.85rem; color:var(--needle-steel); margin-bottom:0.75rem;">
+                Accepted: JPG, PNG, PDF, AI, EPS, SVG, DST, PES, PSD. Up to 50 MB total.
+              </p>
+
+              <div class="dropzone" id="fileDropzone">
+                <div class="dropzone-icon-box">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                </div>
+                <div class="dropzone-text">Drag and drop your artwork files here</div>
+                <div class="dropzone-hint">or click to browse your computer</div>
+                <input type="file" id="fileUploadInput" multiple accept=".jpg,.jpeg,.png,.webp,.pdf,.ai,.eps,.svg,.dst,.pes,.emb">
+              </div>
+              <div id="fileUploadList" class="file-list"></div>
+            </div>
+
+            <!-- 4. Production Specs -->
+            <div style="margin-bottom:1.75rem;">
+              <h3 style="font-size:1.25rem; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--needle-steel-border);">
+                4. Placement, Size &amp; Fabric
+              </h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Placement &amp; Finished Size</label>
+                  <input type="text" name="placement_size" class="form-control" placeholder="e.g. Left chest 3.5 inches wide, or Cap front 2.25 inches tall">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Garment or Fabric Type</label>
+                  <input type="text" name="garment_fabric" class="form-control" placeholder="e.g. Pique polo, Otto structured cap, heavyweight fleece">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Turnaround Needed</label>
+                  <select name="turnaround" class="form-control">
+                    <option value="standard">Standard: Ready in 12 hours (Regular rate)</option>
+                    <option value="rush">Rush: Ready in 2 to 4 hours (+50%)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Optional Add-ons</label>
+                  <select name="addons" class="form-control">
+                    <option value="none">None (Standard file delivery)</option>
+                    <option value="sewout">Add Physical Sew-Out Proof Photo (+$5)</option>
+                    <option value="3dpuff">3D Foam Puff Setup ($8 flat)</option>
+                    <option value="applique">Applique Digitizing ($10 flat)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Special Production Notes or Instructions</label>
+                <textarea name="notes" class="form-control" placeholder="Any thread colors (Madeira/Isacord), minimum line weight concerns, or customer deadlines..."></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%; font-size:1.15rem;">
+                Submit Artwork to the Desk →
+              </button>
+              <div class="form-submit-guarantees">
+                <span>Firm quote in 30 minutes</span>
+                <span class="guarantee-sep">&bull;</span>
+                <span>Free fixes if anything misbehaves</span>
+                <span class="guarantee-sep">&bull;</span>
+                <span>No payment required upfront</span>
+              </div>
+            </div>
+          </form>
+
+          <!-- Success State Card (Shown via JS upon submission) -->
+          <div id="quoteFormSuccess" style="display:none; text-align:center; padding:2rem 1rem;">
+            <div style="width:64px; height:64px; background:var(--sew-green-light); color:var(--sew-green); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h2 style="font-size:1.8rem; margin-bottom:0.75rem;">Got your art!</h2>
+            <p class="lead" style="margin-bottom:1.25rem;">
+              Thanks for sending that over. We'll send your quote within <strong>30 minutes</strong> during business hours.
+            </p>
+            <div class="guarantee-box" style="text-align:left; margin:1.5rem auto; max-width:540px;">
+              <h4 style="color:var(--spool-ink); font-size:1.05rem; margin-bottom:0.4rem;">What happens next:</h4>
+              <ul style="list-style:disc; margin-left:1.5rem; color:var(--spool-ink-light); font-size:0.92rem; line-height:1.6;">
+                <li>A digitizer inspects stitch counts, pull comp, and pathing.</li>
+                <li>Your quote arrives by email. Reply "go" and work starts immediately.</li>
+                <li>If this is your first order with us, your embroidery design is 100% free!</li>
+                <li>Need it urgently? Reply "rush" to the confirmation email and we'll jump on it.</li>
+              </ul>
+            </div>
+            <a href="/" class="btn btn-secondary" style="margin-top:1rem;">Back to Homepage</a>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Reassurance -->
+        <aside class="quote-sidebar">
+          <div class="quote-sidebar-card reg-mark-container">
+            <span class="spec-tag red" style="margin-bottom:0.75rem;">THE DESK PROMISE</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.75rem;">Why 200+ decoration shops trust us:</h3>
+            
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.9rem; font-size:0.92rem; color:var(--spool-ink-light);">
+              <li style="display:flex; gap:0.6rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Files that run clean:</strong> Density and pull comp programmed for your specific fabric.</span>
+              </li>
+              <li style="display:flex; gap:0.6rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>A real coworker answers:</strong> Direct email replies from experienced digitizers.</span>
+              </li>
+              <li style="display:flex; gap:0.6rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Free machine fixes:</strong> Thread breaks on that fill? Send it back, we fix it free.</span>
+              </li>
+              <li style="display:flex; gap:0.6rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>No upfront lock-in:</strong> New accounts pay at delivery after inspecting the sew-out preview.</span>
+              </li>
+            </ul>
+
+            <div class="guarantee-box">
+              <h4>Launch Offer Active</h4>
+              <p>Your first embroidery design (up to 8,000 stitches) is free for your shop. We let the machine sew-out do the talking.</p>
+            </div>
+
+            <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px dashed var(--needle-steel-border); font-family:var(--font-mono); font-size:0.8rem; color:var(--needle-steel);">
+              <div>Parent company: <strong>Digital Minds Agency (DMA)</strong></div>
+              <div>Standard delivery: <strong>Within 12 hours</strong></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/">
+            <img src="/assets/brand/svg/digitizingdesk-horizontal-reversed.svg" alt="DigitizingDesk Logo" width="220" height="48">
+          </a>
+          <p>DigitizingDesk is a production-art partner for US decoration shops. A DMA company.</p>
+          <div class="footer-dma-badge">A DMA company</div>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services/embroidery-digitizing">Embroidery Digitizing</a></li>
+            <li><a href="/services/vector-artwork">Vector Artwork</a></li>
+            <li><a href="/services/color-separations">Color Separations</a></li>
+            <li><a href="/services/patch-design">Custom Patch Design</a></li>
+            <li><a href="/services/dtf-gang-sheets">DTF Gang Sheets</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/pricing">Pricing &amp; Rate Card</a></li>
+            <li><a href="/work">Sew-Out Proofs</a></li>
+            <li><a href="/about">About the Desk</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Shop Guarantee</h4>
+          <p style="font-size:0.88rem; color:#D4D8E2;">
+            Files that run clean on the first try.<br>
+            A real person answers, fast.<br>
+            Free fixes if anything misbehaves.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 DigitizingDesk. A DMA company.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="/terms" style="color:var(--needle-steel);">Terms</a>
+          <a href="/privacy" style="color:var(--needle-steel);">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/quote-calculator.js"></script>
+  <!-- Live Visual Feedback & In-Page Commenting System -->
+  <script src="/assets/js/live-feedback.js"></script>
+</body>
+</html>
