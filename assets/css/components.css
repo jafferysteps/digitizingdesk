@@ -133,7 +133,7 @@
    ------------------------------------------------------------- */
 .estimator-card {
   background: #FFFFFF;
-  border: 2px solid var(--spool-ink);
+  border: 1px solid var(--needle-steel-border); box-shadow: var(--shadow-card);
   border-radius: var(--radius-lg);
   padding: 2.25rem;
   box-shadow: var(--shadow-lg);
@@ -167,8 +167,8 @@
 }
 
 .estimator-pill {
-  border: 1px solid var(--needle-steel-border);
-  background: var(--paper);
+  border: 1px solid #D0D5DD;
+  background: #FFFFFF;
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.5rem;
   text-align: center;

@@ -681,7 +681,7 @@ a:hover {
   background: #FFFFFF;
   border-top: 1px solid var(--needle-steel-border);
   border-bottom: 1px solid var(--needle-steel-border);
-  padding: 1.25rem 0;
+  padding: 0.95rem 0;
 }
 
 .trust-strip-inner {
@@ -695,23 +695,25 @@ a:hover {
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--spool-ink);
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-.trust-icon {
-  width: 28px;
-  height: 28px;
+.trust-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--paper);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--thread-red);
+  background: var(--thread-red);
+  display: inline-block;
   flex-shrink: 0;
+}
+
+.trust-dot-brand {
+  background: var(--spool-ink);
 }
 
 /* -------------------------------------------------------------
@@ -1199,19 +1201,21 @@ a:hover {
 
 .form-control {
   width: 100%;
-  padding: 0.8rem 0.95rem;
+  padding: 0.75rem 0.95rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--spool-ink);
-  background: var(--paper-warm);
-  border: 1px solid var(--needle-steel-border);
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
   border-radius: var(--radius-sm);
-  transition: border-color 0.2s ease, background 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--spool-ink);
+  box-shadow: 0 0 0 3px rgba(23, 32, 58, 0.08);
   background: #FFFFFF;
 }
 
@@ -1229,33 +1233,62 @@ textarea.form-control {
 .service-check-label {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  background: var(--paper-warm);
-  border: 1px solid var(--needle-steel-border);
-  padding: 0.7rem 0.9rem;
+  gap: 0.75rem;
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
+  padding: 0.85rem 1rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 500;
+  color: var(--spool-ink);
   transition: all 0.15s ease;
+  user-select: none;
 }
 
 .service-check-label:hover {
-  background: #FFFFFF;
-  border-color: var(--needle-steel);
+  border-color: var(--spool-ink);
+  background: #FAF8F5;
 }
 
-.service-check-label input:checked ~ span {
-  font-weight: 700;
-  color: var(--thread-red);
+.service-check-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--spool-ink);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.service-check-label:has(input:checked) {
+  border-color: var(--spool-ink);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px var(--spool-ink);
+}
+
+.service-check-label:has(input:checked) .service-check-title {
+  font-weight: 600;
+  color: var(--spool-ink);
+}
+
+.service-check-full {
+  grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+  .service-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-check-full {
+    grid-column: span 1;
+  }
 }
 
 .dropzone {
-  border: 2px dashed var(--needle-steel);
+  border: 1.5px dashed #C8CFDA;
   border-radius: var(--radius-md);
-  padding: 2rem 1.25rem;
+  padding: 2.25rem 1.5rem;
   text-align: center;
-  background: var(--paper);
+  background: #FCFBF9;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -1264,8 +1297,8 @@ textarea.form-control {
 
 .dropzone:hover,
 .dropzone.dragover {
-  border-color: var(--thread-red);
-  background: var(--paper-warm);
+  border-color: var(--spool-ink);
+  background: #F6F4EE;
 }
 
 .dropzone input[type="file"] {
@@ -1278,10 +1311,83 @@ textarea.form-control {
   cursor: pointer;
 }
 
-.dropzone-icon {
-  font-size: 2rem;
-  color: var(--thread-red);
+.dropzone-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--spool-ink);
+  margin-bottom: 0.65rem;
+}
+
+.form-submit-guarantees {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--needle-steel);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.guarantee-sep {
+  color: var(--needle-steel-border);
+}
+
+/* Production Terms Card */
+.production-terms-card {
+  background: #FFFFFF;
+  border: 1px solid var(--needle-steel-border);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  margin-top: 2.5rem;
+}
+
+.terms-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--spool-ink);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--needle-steel-border);
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.terms-item {
+  margin-bottom: 1.5rem;
+}
+
+.terms-item:last-child {
+  margin-bottom: 0;
+}
+
+.terms-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--spool-ink);
   margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.terms-item p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--spool-ink-light);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .terms-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .dropzone-text {

@@ -14,9 +14,9 @@
 
   <!-- Top Announcement Bar -->
   <div class="top-announcement">
-    <span>🧵 <strong>Launch Offer:</strong> First embroidery design free (up to 8,000 stitches) for new shops</span>
-    <span>⏱️ Standard turnaround within 12 business hours</span>
-    <span>⚡ Quote in 30 minutes</span>
+    <span><strong>Launch Offer:</strong> First embroidery design free (up to 8,000 stitches) for new shops</span>
+    <span>Standard turnaround within 12 business hours</span>
+    <span>Quote in 30 minutes</span>
   </div>
 
   <!-- Header -->
@@ -102,23 +102,23 @@
               <div class="service-checkbox-grid">
                 <label class="service-check-label">
                   <input type="checkbox" name="services" value="embroidery" checked>
-                  <span>🧵 Embroidery Digitizing</span>
+                  <span class="service-check-title">Embroidery Digitizing</span>
                 </label>
                 <label class="service-check-label">
                   <input type="checkbox" name="services" value="vector">
-                  <span>📐 Vector Artwork Redraw</span>
+                  <span class="service-check-title">Vector Artwork Redraw</span>
                 </label>
                 <label class="service-check-label">
                   <input type="checkbox" name="services" value="separations">
-                  <span>🎨 Screen Print Color Seps</span>
+                  <span class="service-check-title">Screen Print Color Seps</span>
                 </label>
                 <label class="service-check-label">
                   <input type="checkbox" name="services" value="patch">
-                  <span>🏷️ Custom Patch Design</span>
+                  <span class="service-check-title">Custom Patch Design</span>
                 </label>
                 <label class="service-check-label" style="grid-column: span 2;">
                   <input type="checkbox" name="services" value="dtf">
-                  <span>🖨️ DTF Gang Sheet Build (22" roll)</span>
+                  <span class="service-check-title">DTF Gang Sheet Build (22" roll)</span>
                 </label>
               </div>
             </div>
@@ -131,7 +131,13 @@
               </p>
 
               <div class="dropzone" id="fileDropzone">
-                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-icon-box">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                </div>
                 <div class="dropzone-text">Drag and drop your artwork files here</div>
                 <div class="dropzone-hint">or click to browse your computer</div>
                 <input type="file" id="fileUploadInput" multiple accept=".jpg,.jpeg,.png,.webp,.pdf,.ai,.eps,.svg,.dst,.pes,.emb">
@@ -160,7 +166,7 @@
                   <label class="form-label">Turnaround Needed</label>
                   <select name="turnaround" class="form-control">
                     <option value="standard">Standard: Ready in 12 hours (Regular rate)</option>
-                    <option value="rush">⚡ Rush: Ready in 2 to 4 hours (+50%)</option>
+                    <option value="rush">Rush: Ready in 2 to 4 hours (+50%)</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -185,17 +191,20 @@
               <button type="submit" class="btn btn-primary btn-lg" style="width:100%; font-size:1.15rem;">
                 Submit Artwork to the Desk →
               </button>
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem; font-family:var(--font-mono); font-size:0.78rem; color:var(--needle-steel);">
-                <span>⏱️ Firm quote in 30 minutes</span>
-                <span>🛡️ Free fixes if anything misbehaves</span>
+              <div class="form-submit-guarantees">
+                <span>Firm quote in 30 minutes</span>
+                <span class="guarantee-sep">&bull;</span>
+                <span>Free fixes if anything misbehaves</span>
+                <span class="guarantee-sep">&bull;</span>
+                <span>No payment required upfront</span>
               </div>
             </div>
           </form>
 
           <!-- Success State Card (Shown via JS upon submission) -->
           <div id="quoteFormSuccess" style="display:none; text-align:center; padding:2rem 1rem;">
-            <div style="width:64px; height:64px; background:var(--sew-green-light); color:var(--sew-green); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1.5rem;">
-              ✓
+            <div style="width:64px; height:64px; background:var(--sew-green-light); color:var(--sew-green); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </div>
             <h2 style="font-size:1.8rem; margin-bottom:0.75rem;">Got your art!</h2>
             <p class="lead" style="margin-bottom:1.25rem;">
@@ -223,19 +232,19 @@
             
             <ul style="list-style:none; display:flex; flex-direction:column; gap:0.9rem; font-size:0.92rem; color:var(--spool-ink-light);">
               <li style="display:flex; gap:0.6rem;">
-                <span style="color:var(--sew-green); font-weight:bold;">✓</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>Files that run clean:</strong> Density and pull comp programmed for your specific fabric.</span>
               </li>
               <li style="display:flex; gap:0.6rem;">
-                <span style="color:var(--sew-green); font-weight:bold;">✓</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>A real coworker answers:</strong> Direct email replies from experienced digitizers.</span>
               </li>
               <li style="display:flex; gap:0.6rem;">
-                <span style="color:var(--sew-green); font-weight:bold;">✓</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>Free machine fixes:</strong> Thread breaks on that fill? Send it back, we fix it free.</span>
               </li>
               <li style="display:flex; gap:0.6rem;">
-                <span style="color:var(--sew-green); font-weight:bold;">✓</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--sew-green);margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>No upfront lock-in:</strong> New accounts pay at delivery after inspecting the sew-out preview.</span>
               </li>
             </ul>

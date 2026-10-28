@@ -329,7 +329,7 @@
   // Banner
   const banner = document.createElement('div');
   banner.id = 'dd-fb-banner';
-  banner.innerHTML = '🎯 <strong>Comment Mode Active:</strong> Click anywhere on the webpage to drop a pin and leave feedback. <span style="text-decoration:underline;cursor:pointer;margin-left:12px;" id="dd-banner-done">Done</span>';
+  banner.innerHTML = '<strong>[REVIEW MODE]</strong> Click anywhere on the webpage to drop a pin and leave feedback. <span style="text-decoration:underline;cursor:pointer;margin-left:12px;" id="dd-banner-done">Done</span>';
   document.body.appendChild(banner);
 
   document.getElementById('dd-banner-done').addEventListener('click', () => {
@@ -354,7 +354,7 @@
   const modal = document.createElement('div');
   modal.id = 'dd-fb-modal';
   modal.innerHTML = `
-    <h4><span>💬 Add Note / Feedback</span> <span id="dd-modal-target" style="font-weight:400;font-size:11px;color:#8A93A6;"></span></h4>
+    <h4><span>Add Note / Feedback</span> <span id="dd-modal-target" style="font-weight:400;font-size:11px;color:#8A93A6;"></span></h4>
     <textarea placeholder="e.g. Change this title to..., make this button bigger, fix alignment..."></textarea>
     <div class="dd-modal-actions">
       <button class="dd-btn-del" id="dd-modal-del" style="display:none;">Delete</button>
@@ -369,13 +369,13 @@
   drawer.id = 'dd-fb-drawer';
   drawer.innerHTML = `
     <div class="dd-drawer-header">
-      <h3>📋 Review Comments (<span id="dd-drawer-count">0</span>)</h3>
+      <h3>Review Comments (<span id="dd-drawer-count">0</span>)</h3>
       <button class="dd-drawer-close" id="dd-drawer-close-btn">&times;</button>
     </div>
     <div class="dd-drawer-body" id="dd-drawer-body"></div>
     <div class="dd-drawer-footer">
       <button class="dd-btn-copy-all" id="dd-copy-all-btn">
-        📋 Copy All for Assistant
+        Copy All for Assistant
       </button>
     </div>
   `;
@@ -554,7 +554,7 @@
     if (comments.length === 0) {
       body.innerHTML = `
         <div style="text-align:center;padding:40px 10px;color:#8A93A6;">
-          <p style="font-size:32px;margin:0 0 10px 0;">🎯</p>
+          <p style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8A93A6;margin:0 0 10px 0;">[ NO NOTES ]</p>
           <p style="font-weight:600;margin:0 0 4px 0;">No comments yet</p>
           <p style="font-size:12px;margin:0;">Click <strong>"+ Add Comment"</strong> at the bottom right and tap anywhere on the screen.</p>
         </div>
@@ -602,7 +602,7 @@
     navigator.clipboard.writeText(report).then(() => {
       const btn = document.getElementById('dd-copy-all-btn');
       const originalText = btn.innerHTML;
-      btn.innerHTML = '✅ Copied to Clipboard!';
+      btn.innerHTML = 'Copied to Clipboard!';
       setTimeout(() => { btn.innerHTML = originalText; }, 2000);
       alert('Copied! Ab aap seedha yahan chat me paste kardein.');
     }).catch(() => {

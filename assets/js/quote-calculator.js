@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : (file.size / 1024).toFixed(0) + ' KB';
 
       item.innerHTML = `
-        <span>📄 <strong>${file.name}</strong> (${sizeStr})</span>
+        <span><strong>${file.name}</strong> (${sizeStr})</span>
         <button type="button" class="remove-file-btn" data-index="${index}" style="background:none;border:none;color:#D63C30;cursor:pointer;font-weight:bold;">×</button>
       `;
       fileList.appendChild(item);
