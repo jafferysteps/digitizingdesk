@@ -7,8 +7,8 @@
   <meta name="description" content="Print-ready, tightly nested DTF gang sheet layouts at 22 inches wide. Eliminate wasted film. Transparent 300 DPI files ready in 6 to 12 hours from $10.">
   
   <link rel="icon" type="image/svg+xml" href="/assets/brand/svg/favicon.svg">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.2">
+  <link rel="stylesheet" href="/assets/css/components.css?v=2.2">
 </head>
 <body class="bg-cutting-mat">
 
@@ -18,35 +18,88 @@
     <span><a href="/get-quote">Send art for 30-min quote &rarr;</a></span>
   </div>
 
+    <!-- Site Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="site-logo">
-        <img src="/assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk" width="220" height="48">
+      <a href="/" class="site-logo" aria-label="DigitizingDesk Home">
+        <img src="/assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk - Files that run clean" width="220" height="48">
       </a>
+
+      <!-- Desktop Nav -->
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li class="nav-item-dropdown">
-            <a href="/services/dtf-gang-sheets" class="nav-link active">Services <small style="font-size:0.7em;">▼</small></a>
+            <a href="/services/embroidery-digitizing" class="nav-link active">Services <small style="font-size:0.7em;">▼</small></a>
             <div class="nav-dropdown-menu">
-              <a href="/services/embroidery-digitizing" class="dropdown-item">Embroidery Digitizing <small>From $8</small></a>
-              <a href="/services/vector-artwork" class="dropdown-item">Vector Artwork <small>From $8</small></a>
-              <a href="/services/color-separations" class="dropdown-item">Color Separations <small>From $8</small></a>
-              <a href="/services/patch-design" class="dropdown-item">Custom Patch Design <small>From $8</small></a>
-              <a href="/services/dtf-gang-sheets" class="dropdown-item">DTF Gang Sheets <small>From $8</small></a>
+              <a href="/services/embroidery-digitizing" class="dropdown-item">
+                Embroidery Digitizing
+                <small>Left chest, caps, 3D puff · $8</small>
+              </a>
+              <a href="/services/vector-artwork" class="dropdown-item">
+                Vector Artwork &amp; Cleanup
+                <small>Simple $8 · Complex $18</small>
+              </a>
+              <a href="/services/color-separations" class="dropdown-item">
+                Color Separations
+                <small>Spot, simulated process, CMYK · from $10</small>
+              </a>
+              <a href="/services/patch-design" class="dropdown-item">
+                Custom Patch Design
+                <small>Embroidered, PVC, woven · from $20</small>
+              </a>
+              <a href="/services/dtf-gang-sheets" class="dropdown-item">
+                DTF Gang Sheet Build
+                <small>22" nested layouts · from $10</small>
+              </a>
             </div>
           </li>
-          <li><a href="/pricing" class="nav-link">Pricing</a></li>
-          <li><a href="/work" class="nav-link">Work</a></li>
-          <li><a href="/about" class="nav-link">About</a></li>
-          <li><a href="/faq" class="nav-link">FAQ</a></li>
+          <li><a href="/pricing" class="nav-link ">Pricing</a></li>
+          <li><a href="/work" class="nav-link ">Work</a></li>
+          <li><a href="/about" class="nav-link ">About</a></li>
+          <li><a href="/faq" class="nav-link ">FAQ</a></li>
         </ul>
       </nav>
+
+      <!-- Action Buttons & Hamburger Toggle -->
       <div class="header-cta-group">
-        <a href="/pricing" class="btn btn-secondary btn-sm">Rate Card</a>
+        <a href="/pricing" class="btn btn-secondary btn-sm header-rate-btn">Rate Card</a>
         <a href="/get-quote" class="btn btn-primary btn-sm">Get a Quote</a>
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Overlay & Panel -->
+  <div id="drawerOverlay" class="mobile-drawer-overlay"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+        <a href="/" aria-label="DigitizingDesk Home">
+          <img src="/assets/brand/svg/digitizingdesk-horizontal-full.svg" alt="DigitizingDesk" style="height: 38px; width:auto;">
+        </a>
+        <button id="closeDrawerBtn" aria-label="Close navigation" style="background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--spool-ink); line-height:1; padding:0.25rem 0.5rem;">&times;</button>
+      </div>
+      <div style="font-family: var(--font-mono); font-size:0.8rem; color:var(--thread-red); margin-bottom:1rem; text-transform:uppercase; font-weight:600; letter-spacing:0.05em;">Navigation</div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem; padding:0; margin:0;">
+        <li><a href="/" style="color:var(--spool-ink); font-weight:400; font-size:1rem; text-decoration:none;">Home</a></li>
+        <li><a href="/services/embroidery-digitizing" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">Embroidery Digitizing</a></li>
+        <li><a href="/services/vector-artwork" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">Vector Artwork</a></li>
+        <li><a href="/services/color-separations" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">Color Separations</a></li>
+        <li><a href="/services/patch-design" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">Custom Patch Design</a></li>
+        <li><a href="/services/dtf-gang-sheets" style="color:var(--spool-ink); font-weight:700; color:var(--thread-red); font-size:0.95rem; text-decoration:none;">DTF Gang Sheets</a></li>
+        <li><a href="/pricing" style="color:var(--spool-ink); font-weight:400; font-size:1rem; text-decoration:none;">Pricing &amp; Rate Card</a></li>
+        <li><a href="/work" style="color:var(--spool-ink); font-weight:400; font-size:1rem; text-decoration:none;">Proof &amp; Work</a></li>
+        <li><a href="/about" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">About DigitizingDesk</a></li>
+        <li><a href="/faq" style="color:var(--spool-ink); font-weight:400; font-size:0.95rem; text-decoration:none;">Shop-Floor FAQ</a></li>
+      </ul>
+    </div>
+    <div style="padding-top:1.5rem; border-top:1px dashed var(--needle-steel-border); margin-top:1.5rem;">
+      <a href="/get-quote" class="btn btn-primary" style="width:100%; text-align:center;">Get a Quote (30 min)</a>
+      <p style="text-align:center; font-family:var(--font-mono); font-size:0.75rem; color:var(--needle-steel); margin-top:0.75rem; margin-bottom:0;">A DMA company</p>
+    </div>
+  </aside>
 
   <section class="hero">
     <div class="container">
@@ -178,49 +231,64 @@
     </div>
   </section>
 
+    <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/">
+          <a href="/" aria-label="DigitizingDesk Home">
             <img src="/assets/brand/svg/digitizingdesk-horizontal-reversed.svg" alt="DigitizingDesk Logo" width="220" height="48">
           </a>
-          <p>DigitizingDesk is a production-art partner for US decoration shops. A DMA company.</p>
-          <div class="footer-dma-badge">A DMA company</div>
+          <p>
+            DigitizingDesk is a production-art partner for US decoration shops. We turn customer artwork into files that run clean on the machine.
+          </p>
+          <div class="footer-dma-badge">
+            A DMA company (Digital Minds Agency)
+          </div>
         </div>
+
         <div>
           <h4 class="footer-title">Services</h4>
           <ul class="footer-links">
             <li><a href="/services/embroidery-digitizing">Embroidery Digitizing</a></li>
-            <li><a href="/services/vector-artwork">Vector Artwork</a></li>
+            <li><a href="/services/vector-artwork">Vector Artwork Conversion</a></li>
             <li><a href="/services/color-separations">Color Separations</a></li>
             <li><a href="/services/patch-design">Custom Patch Design</a></li>
-            <li><a href="/services/dtf-gang-sheets">DTF Gang Sheets</a></li>
+            <li><a href="/services/dtf-gang-sheets">DTF Gang Sheet Build</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 class="footer-title">Links</h4>
+          <h4 class="footer-title">Company &amp; Work</h4>
           <ul class="footer-links">
-            <li><a href="/pricing">Rate Card</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/pricing">Pricing &amp; Rate Card</a></li>
+            <li><a href="/work">Sew-Out Proofs &amp; Work</a></li>
+            <li><a href="/about">About the Desk</a></li>
+            <li><a href="/faq">Decorator FAQ</a></li>
             <li><a href="/get-quote">Get a Quote</a></li>
           </ul>
         </div>
+
         <div>
           <h4 class="footer-title">Shop Guarantee</h4>
-          <p style="font-size:0.88rem; color:#D4D8E2;">
-            Files that run clean on the first try.<br>
-            A real person answers, fast.<br>
-            Free fixes if anything misbehaves.
+          <p style="font-size:0.88rem; color:#D4D8E2; margin-bottom:0.75rem;">
+            1. Files that run clean on the first try.<br>
+            2. A real person answers, fast.<br>
+            3. Free fixes if a file misbehaves.
           </p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--hoop-gold);">
+            @digitizingdesk
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <div>&copy; 2026 DigitizingDesk. A DMA company.</div>
+        <div>
+          &copy; 2026 DigitizingDesk. All rights reserved. A DMA company.
+        </div>
         <div style="display:flex; gap:1.5rem;">
-          <a href="/terms" style="color:var(--needle-steel);">Terms</a>
-          <a href="/privacy" style="color:var(--needle-steel);">Privacy</a>
+          <a href="/terms" style="color:var(--needle-steel);">Terms &amp; Machine Guarantee</a>
+          <a href="/privacy" style="color:var(--needle-steel);">Privacy &amp; Artwork Ownership</a>
         </div>
       </div>
     </div>
