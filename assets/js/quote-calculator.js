@@ -15,32 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const rateMatrix = {
     embroidery: {
-      chest: { price: 15, name: 'Left Chest (<8k st)', time: '12 hours' },
-      cap: { price: 18, name: 'Cap Front (<8k st)', time: '12 hours' },
-      medium: { price: 25, name: 'Medium (8k-15k st)', time: '12 hours' },
-      jacket: { price: 40, name: 'Jacket Back (15k-30k)', time: '12-24 hours' }
+      chest: { price: 8, name: 'Left Chest Digitizing', time: '12 hours' },
+      cap: { price: 8, name: 'Cap / Hat Digitizing', time: '12 hours' },
+      puff: { price: 8, name: '3D Puff Digitizing', time: '12 hours' },
+      applique: { price: 10, name: 'Applique Digitizing', time: '12 hours' },
+      jacket: { price: 28, name: 'Jacket Back Digitizing', time: '12-24 hours' }
     },
     vector: {
-      simple: { price: 8, name: 'Simple (1-3 flat col)', time: '4-8 hours' },
-      standard: { price: 15, name: 'Standard Multi-color', time: '8-12 hours' },
-      complex: { price: 28, name: 'Complex Illustration', time: '12 hours' },
-      cleanup: { price: 6, name: 'Vector Cleanup', time: '4 hours' }
+      simple: { price: 8, name: 'Simple Vector', time: '4-8 hours' },
+      complex: { price: 18, name: 'Complex Vector', time: '8-12 hours' },
+      sponsor: { price: 50, name: 'Sponsor Vector Board', time: '12 hours' },
+      cleanup: { price: 5, name: 'Vector Cleanup & Node Fixing', time: '4 hours' }
     },
     separations: {
-      spot2: { price: 20, name: 'Spot Color (2 screens)', time: '12 hours' },
-      spot4: { price: 40, name: 'Spot Color (4 screens)', time: '12 hours' },
-      cmyk: { price: 35, name: 'CMYK 4-Process Flat', time: '12 hours' },
-      sim: { price: 45, name: 'Simulated Process', time: '12 hours' }
+      spot: { price: 10, name: 'Spot Color (1-3 screens)', time: '12 hours' },
+      spot6: { price: 18, name: 'Spot Color (4-6 screens)', time: '12 hours' },
+      cmyk: { price: 25, name: 'CMYK 4-Color Process', time: '12 hours' },
+      sim: { price: 35, name: 'Simulated Process', time: '12 hours' }
     },
     patch: {
-      art3: { price: 20, name: 'Patch Art (1-3 colors)', time: '24 hours' },
-      art4: { price: 35, name: 'Patch Art (Detailed)', time: '24 hours' },
-      digitized: { price: 25, name: 'Stitch File + Border', time: '24 hours' },
-      pvc: { price: 35, name: 'PVC / Rubber Mold Art', time: '24 hours' }
+      standard: { price: 15, name: 'Standard Patch Art & Specs', time: '24 hours' },
+      detailed: { price: 25, name: 'Detailed Patch Art (4+ col)', time: '24 hours' },
+      digitized: { price: 8, name: 'Embroidered Patch Stitch File', time: '12-24 hours' },
+      pvc: { price: 25, name: 'PVC / Rubber Mold Art', time: '24 hours' }
     },
     dtf: {
-      sheet60: { price: 10, name: '22" x 60" Gang Sheet', time: '6-12 hours' },
-      sheet120: { price: 18, name: '22" x 120" Gang Sheet', time: '6-12 hours' },
+      sheet24: { price: 8, name: '22" x 24" Gang Sheet', time: '6-12 hours' },
+      sheet60: { price: 12, name: '22" x 60" Gang Sheet', time: '6-12 hours' },
+      sheet120: { price: 20, name: '22" x 120" Gang Sheet', time: '6-12 hours' },
       sheet240: { price: 30, name: '22" x 240" Gang Sheet', time: '12 hours' }
     }
   };
