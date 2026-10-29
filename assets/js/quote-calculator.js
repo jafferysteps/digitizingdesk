@@ -201,6 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(cb => cb.parentElement.innerText.trim())
         .join(', ') || 'Not specified';
 
+      const captchaCheck = quoteForm.querySelector('#captchaCheck');
+      if (captchaCheck && !captchaCheck.checked) {
+        alert('Please complete the anti-spam human verification checkbox before submitting.');
+        captchaCheck.focus();
+        return;
+      }
+
       const submitBtn = quoteForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
