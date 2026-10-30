@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         portfolioItems.forEach(card => {
           const category = card.getAttribute('data-category');
-          if (filterVal === 'all' || category === filterVal) {
+          const cats = (category || '').toLowerCase().split(/\s+/); if (filterVal === 'all' || cats.includes(filterVal.toLowerCase())) {
             card.style.display = 'block';
             card.style.opacity = '1';
           } else {
